@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+	<link href="stylesheet.css" rel="stylesheet">
+
+	<title>Tip Calculator</title>
+</head>
+<body>
+	<div class="container my-5">
+		<div class="container-fluid ">
+			<h1 class="text-center py-5">Tip Calculator</h1>
+			
+			<div class="d-flex justify-content-center text-center">
+				<form onsubmit="calcTip(event)">
+					<label for="costMeal">Cost of Meal:</label>
+					
+					<div class="d-flex justify-content-center text-center pt-1 pb-3">
+						<input type="number" name="cost" id="costMeal" class="form-control text-center w-50 fs-4" min="0"  step=".01" placeholder="0.00" required><br>
+					</div>
+
+					<label for="tip">Tip Percentage:</label>
+					
+					<div class="d-flex justify-content-center text-center pt-1 pb-4">
+						<input type="number" name="tip" id="tip" class="form-control text-center w-50 fs-4" placeholder="00" required><br>
+					</div>
+		
+					<input id="buttonSub"type="submit" class="btn btn-secondary btn-lg" value="Submit">
+				</form>
+			</div>
+
+			<p id="totalCost" class="text-center pt-4"></p>
+			
+			<p id="totalTip" class="text-center pb-2"></p>
+
+			<div class="d-flex justify-content-center text-center pb-4">
+				<button id="clearBtn" class="btn btn-light btn-lg">Clear Fields</button>
+			</div>
+		</div>
+	</div>
+
+<script src="script.js"></script>
+</body>
+</html>
